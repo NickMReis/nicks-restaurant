@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+:root{
+    --corPrimaria: #FFB534;
+    --corSecundaria: #000000;
+    --corTerciaria:#FB8B24;
+    --corQuarta: #FDCB9E;
+    --corQuinta: #5F0F40;
+    --corTitulo:#2C5D63;
+    --corDestaque: #9A031E;
+    --corHover:#2C5D63;
+    --corTxtRodape:#272727;
+
+    --fonteTxt1: 'Krona One', sans-serif;
+    --fonteTxt2: 'Montserrat', sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--corPrimaria);
+    color: var(--corSecundaria);
+}
+
+/*Header*/
+
+.cabecalho{
+    background-color: var(--corTerciaria);
+    padding:3%;
+}
+
+.cabecalhoMenu{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.cabecalhoMenu_link{
+    font-size: 1.57rem;
+    font-family: var(--fonteTxt2);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--corQuinta);
+}
+
+.cabecalhoMenu_link:hover{
+    color: var(--corHover);
+}
+
+/*Main*/
+
+.apresentacao{
+    padding: 7% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px;
+}
+
+.apresentacaoAboutContacts{
+    padding:8% 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.apresentacaoTxt{
+    width:700px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.apresentacaoTxt_titulo{
+    font-size: 2.2rem;
+    font-family: var(--fonteTxt2);
+    color:var(--corTitulo);
+}
+
+.apresentacaoTxt_subtitulo{
+    font-size: 1.69rem;
+    font-family: var(--fonteTxt2);
+    color:var(--corQuinta);
+    display:flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.apresentacaoTxt_paragrafo{
+    font-size: 1.125rem;
+    font-weight: 400;
+    font-family: var(--fonteTxt1);
+    color: var(--corSecundaria);
+}
+
+.apresentacaoTxt_paragrafoDestaque{
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: var(--fonteTxt1);
+    color:var(--corDestaque);
+}
+
+.apresentacaoTxt_paragrafoLink{
+    color:var(--corQuinta);
+    text-decoration: none;
+}
+
+.apresentacaoTxt_paragrafoLink:hover{
+    color:var(--corHover)
+}
+
+.apresentacaoTxt_redes{
+    display: flex;
+    gap:50px;
+}
+
+.apresentacaoTxt_redesLink{
+    background-color: var(--corQuarta);
+    padding:10px 30px 10px 30px;
+    border: var(--corQuinta) solid 2px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-family: var(--fonteTxt2);
+    font-weight: 600;
+    color: var(--corQuinta);
+    display:flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.apresentacaoTxt_redesLink:hover{
+    background-color: dimgray;
+    color: var(--corHover);
+    border-color: var(--corHover);
+}
+
+.apresentacaoTxt_redesImg{
+    max-width:30px;
+    max-height:30px;
+    width:auto;
+    height:auto;
+}
+
+.apresentacaoImgPrincipal{
+    width:50%;
+    border-radius: 16px;
+    border: var(--corQuinta) solid 2px;
+}
+
+/*Footer*/
+
+.rodape{
+    background-color: var(--corQuarta);
+    padding: 3.5%;
+    color:var(--corTxtRodape);
+}
+
+.rodapeTxt{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.rodapeTxt_titulo{
+    font-size: 0.8125rem;
+    font-family: var(--fonteTxt1);
+    font-weight: 400;
+}
+
+.rodapeTxt_paragrafo{
+    font-size: 0.75rem;
+    font-family: var(--fonteTxt1);
+    font-weight: 400;
+}
+
+@media(max-width:1180px){
+    .apresentacao{
+        flex-direction: column-reverse;
+        gap:40px;
+        padding: 5%;
+    }
+}
+
+@media(max-width:950px){
+    .cabecalho{
+        padding: 5%;
+    }
+    .apresentacaoTxt{
+        width: auto;
+        align-items: center;
+    }
+    .apresentacaoAboutContacts{
+        flex-direction: column-reverse;
+        gap:40px;
+        padding: 5%;
+    }
+    .apresentacaoTxt_redes{
+        flex-direction: column;
+        gap:20px;
+    }
+}
+
+@media(max-width:690px){
+    .cabecalhoMenu{
+        flex-wrap: wrap;
+        width:auto;
+        gap:20px;
+    }
+    .cabecalhoMenu_link{
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-width:410px){
+    .cabecalhoMenu_link{
+        font-size: 1rem;
+    }
+    .apresentacaoTxt_redesLink{
+        padding:5px 15px;
+        font-size:0.9rem;
+    }
+}
